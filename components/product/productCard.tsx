@@ -1,6 +1,7 @@
 import React from 'react'
 import { Product } from '@/types/products.types'
 import Image from 'next/image';
+import Link from 'next/link';
  type productCardProps  = {
   product:Product
  }
@@ -8,12 +9,20 @@ import Image from 'next/image';
 
 function ProductCard({ product }: productCardProps) {
   return (
+    <Link href={`/products/${product.id}`}
+    >
+
+      
+
+
     <div className="max-w-4xl mx-auto p-6">
-  <img
-    src={product.thumbnail}
-    alt={product.title}
-    className="w-80 rounded-lg"
-  />
+  <Image
+          src={product.thumbnail}
+          alt={product.title}
+          width={250}
+          height={250}
+          className="w-full h-52 object-cover rounded"
+        />
 
   <h1 className="text-3xl font-bold mt-4">
     {product.title}
@@ -35,6 +44,7 @@ function ProductCard({ product }: productCardProps) {
     Add To Cart
   </button>
 </div>
+    </Link>
   );
 }
 
