@@ -21,7 +21,7 @@ export function sortProducts(products: Product[], options: SortOptions) {
   }
 
   if (sort === "rating") {
-    sortedProducts.sort((a, b) => a.rating - b.rating);
+    sortedProducts.sort((a, b) => b.rating - a.rating);
   }
 
   return sortedProducts;
