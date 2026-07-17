@@ -1,5 +1,6 @@
 import Link from "next/link";
 import SearchBar from "./Searchbar";
+import CartIcon from "./CartIcon";
 export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white/80 backdrop-blur-md">
@@ -9,11 +10,15 @@ export default function Navbar() {
           href="/"
           className="text-2xl font-extrabold tracking-tight text-slate-800"
         >
-          <span className="text-emerald-600">Nova</span>Shop
+          <span className="text-2xl font-black text-gray-900 cursor-pointer select-none">
+            <span className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200">
+              Nova
+            </span>
+            Shop
+          </span>
         </Link>
-         
 
-         <SearchBar/>
+        <SearchBar />
 
         {/* Navigation */}
         <div className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
@@ -33,15 +38,7 @@ export default function Navbar() {
         {/* Right Side */}
         <div className="flex items-center gap-4">
           {/* Cart */}
-          <Link
-            href="/cart"
-            className="relative rounded-full p-2 transition hover:bg-emerald-50"
-          >
-            🛒
-            <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-emerald-600 text-xs font-semibold text-white">
-              0
-            </span>
-          </Link>
+          <CartIcon />
 
           {/* Login Button */}
           <Link
