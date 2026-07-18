@@ -1,9 +1,12 @@
 import React from "react";
-
+import Hero from "@/components/Home/Hero";
+import FeaturedProducts from "@/components/Home/FeaturedProducts";
 export default function Home() {
   return (
-    <div>
-      <h1>Hello Sehrish !!!</h1>
-    </div>
+    <main>
+      <Hero/>
+      <FeaturedProducts/>
+
+    </main>
   );
 }

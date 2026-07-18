@@ -1,1 +1,75 @@
+/* @import "tailwindcss";
+
+@theme inline {
+  --color-paper: #faf8f4;
+  --color-ink: #1c1b19;
+  --color-ink-muted: #6b6862;
+  --color-accent: #2f4538;
+  --color-line: #d9d4c8;
+
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+
+.eyebrow {
+  font-variant: small-caps;
+  letter-spacing: 0.18em;
+  font-weight: 600;
+}
+
+
+.plate-caption {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0.02em;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import "tailwindcss";
+
+@theme inline {
+  --color-bone: #f6f3ed;
+  --color-ink: #14161b;
+  --color-ink-muted: #71757f;
+  --color-accent: #1f3a5f;
+  --color-accent-soft: #dce6ee;
+  --color-line: #ddd8cc;
+
+  --font-display: var(--font-display), Georgia, serif;
+  --font-body: var(--font-body), system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+.eyebrow {
+  letter-spacing: 0.22em;
+  font-weight: 600;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
