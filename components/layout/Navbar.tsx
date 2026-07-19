@@ -11,7 +11,7 @@ export default function Navbar() {
           className="text-2xl font-extrabold tracking-tight text-slate-800"
         >
           <span className="text-2xl font-black text-gray-900 cursor-pointer select-none">
-            <span className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200">
+            <span className="text-emerald-600 hover:text-emerald-700 transition-colors duration-200 ">
               Nova
             </span>
             Shop

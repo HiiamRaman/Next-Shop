@@ -1,40 +1,110 @@
+import Link from "next/link";
 import { getProducts } from "@/services/product.service";
 import ProductCard from "../product/productCard";
 
-async function FeaturedProducts() {
+export default async function FeaturedProducts() {
   const products = await getProducts();
 
-  // Fix sorting logic: sort by rating descending
   const featuredProducts = [...products]
     .sort((a, b) => b.rating - a.rating)
     .slice(0, 4);
 
-  return (    
-    <section className=" px-6 py-12 md:py-16 bg-gradient-to-b from-white via-slate-50 to-slate-100 rounded-xl shadow-sm">
-      {/* Section Header */}
-      <div className="text-center mb-10">
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight relative inline-block">
-          Featured Products
-          <span className="absolute -bottom-1 left-0 w-full h-1 bg-emerald-200 rounded-full"></span>
-        </h2>
-        <p className="mt-3 text-gray-600 text-sm">
-          Handpicked items with top ratings
-        </p>
-      </div>
+  return (
+    <section
+      className="
+        bg-slate-50
+        py-24
+      "
+    >
+      <div
+        className="
+          mx-auto
+          max-w-7xl
+          px-6
+        "
+      >
+        {/* Header */}
+        <div
+          className="
+            mb-14
+            flex
+            flex-col
+            gap-6
+            md:flex-row
+            md:items-end
+            md:justify-between
+          "
+        >
+          <div className="max-w-2xl">
+            <p
+              className="
+                mb-3
+                text-sm
+                font-semibold
+                uppercase
+                tracking-[0.25em]
+                text-emerald-600
+              "
+            >
+              Our Collection
+            </p>
 
-      {/* Product Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-        {featuredProducts.map((product) => (
-          <div
-            key={product.id}
-            className="transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg rounded-xl"
-          >
-            <ProductCard product={product} />
+            <h2
+              className="
+                text-4xl
+                font-bold
+                tracking-tight
+                text-slate-900
+                md:text-5xl
+              "
+            >
+              Featured Products
+            </h2>
+
+            <p
+              className="
+                mt-4
+                text-lg
+                leading-relaxed
+                text-slate-500
+              "
+            >
+              Discover our highest-rated products carefully selected for
+              exceptional quality and everyday performance.
+            </p>
           </div>
-        ))}
+
+          <Link
+            href="/products"
+            className="
+              inline-flex
+              items-center
+              gap-2
+              font-semibold
+              text-emerald-600
+              transition
+              hover:text-emerald-700
+            "
+          >
+            View All
+            <span>→</span>
+          </Link>
+        </div>
+
+        {/* Products Grid */}
+        <div
+          className="
+            grid
+            gap-8
+            sm:grid-cols-2
+            lg:grid-cols-4
+          "
+        >
+          {featuredProducts.map((product) => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </section>
   );
 }
-
-export default FeaturedProducts;
