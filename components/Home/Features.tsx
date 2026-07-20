@@ -1,7 +1,3 @@
-
-
-
-
 export default function Features() {
   const features = [
     {
@@ -11,7 +7,8 @@ export default function Features() {
     },
     {
       title: "Secure Payment",
-      description: "Your transactions are protected with secure payment systems.",
+      description:
+        "Your transactions are protected with secure payment systems.",
       icon: "🔒",
     },
     {
@@ -38,7 +35,8 @@ export default function Features() {
             Built for a better shopping experience
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-slate-600">
-            Everything you need for a simple, secure, and enjoyable shopping journey.
+            Everything you need for a simple, secure, and enjoyable shopping
+            journey.
           </p>
         </div>
 
@@ -50,13 +48,17 @@ export default function Features() {
               className="flex flex-col items-center text-center p-6 rounded-2xl bg-white shadow-sm hover:shadow-2xl transition  hover:shadow-emerald-500/30 group  "
             >
               {/* Icon */}
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-3xl mb-6 group-hover:bg-emerald-600
-                  group-hover:text-white">
+              <div
+                className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 text-3xl mb-6 group-hover:bg-emerald-600
+                  group-hover:text-white"
+              >
                 {feature.icon}
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-bold text-slate-900">{feature.title}</h3>
+              <h3 className="text-lg font-bold text-slate-900">
+                {feature.title}
+              </h3>
 
               {/* Description */}
               <p className="mt-3 text-slate-600 text-sm leading-relaxed">
@@ -69,8 +71,3 @@ export default function Features() {
     </section>
   );
 }
-
-
-
-
-

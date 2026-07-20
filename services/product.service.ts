@@ -12,7 +12,7 @@ export async function getProducts(): Promise<Product[]> {
   return data.products;
 }
 
-export async function getProductById(id: number): Promise<Product> {
+export async function getProductById(id: number): Promise<Product | null> {
   const res = await fetch(`https://dummyjson.com/products/${id}`, {
     next: { revalidate: 86400 },
   });

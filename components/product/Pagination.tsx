@@ -15,7 +15,7 @@ function Pagination({
   totalPages,
   searchParams,
 }: PaginationProps) {
-  function createPageUrl(page:Number) {
+  function createPageUrl(page: Number) {
     const params = new URLSearchParams();
     if (searchParams.search) {
       params.set("search", searchParams.search);
@@ -33,7 +33,7 @@ function Pagination({
   return (
     <div className="flex justify-center items-center gap-3 mt-10">
       {Array.from({ length: totalPages }).map((_, index) => {
-        const pageNumber = index+1
+        const pageNumber = index + 1;
         return (
           <Link
             key={pageNumber}

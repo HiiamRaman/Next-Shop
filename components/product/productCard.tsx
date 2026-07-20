@@ -1,62 +1,5 @@
-// "use client";
-
-// import React from "react";
-// import { Product } from "@/types/products.types";
-// import Image from "next/image";
-// import Link from "next/link";
-// import { useCartStore } from "@/store/cartStore";
-// type productCardProps = {
-//   product: Product;
-// };
-
-// function ProductCard({ product }: productCardProps) {
-//   const addToCart = useCartStore((state) => state.addToCart);
-//   return (
-//     <>
-//       <Link href={`/products/${product.id}`}>
-//         <div className="max-w-4xl mx-auto p-6">
-//           <Image
-//             src={product.thumbnail}
-//             alt={product.title}
-//             width={250}
-//             height={250}
-//             className="w-full h-52 object-cover rounded"
-//           />
-
-//           <h1 className="text-3xl font-bold mt-4">{product.title}</h1>
-
-//           <p className="text-yellow-500">⭐ {product.rating}</p>
-
-//           <p className="text-2xl font-semibold mt-2">${product.price}</p>
-
-//           <p className="mt-4 text-gray-600">{product.description}</p>
-//         </div>
-//       </Link>
-//       <button
-//         className="mt-6 bg-black text-white px-5 py-2 rounded hover:cursor-pointer"
-//         onClick={() => addToCart(product)}
-//       >
-//         Add To Cart
-//       </button>
-//     </>
-//   );
-// }
-
-// export default ProductCard;
-
-
-
-
-
-
-
-
-
-
-
 "use client";
-
-import React from "react";
+//this page is for all products
 import { Product } from "@/types/products.types";
 import Image from "next/image";
 import Link from "next/link";
@@ -91,7 +34,9 @@ function ProductCard({ product }: productCardProps) {
           <p className="mt-2 text-gray-600 text-sm line-clamp-2 min-h-[40px]">
             {product.description}
           </p>
-          <p className="text-2xl font-semibold mt-3 text-gray-900">${product.price}</p>
+          <p className="text-2xl font-semibold mt-3 text-gray-900">
+            ${product.price}
+          </p>
         </div>
       </Link>
 
